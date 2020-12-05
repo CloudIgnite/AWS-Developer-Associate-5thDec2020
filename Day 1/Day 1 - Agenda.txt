@@ -1,0 +1,19 @@
+AWS Overview
+•     Overview of  Cloud computing
+•     Identify the main events in the history of AWS
+•     Various AWS platform
+•     Understand AWS Global Infrastructure and Security
+•     Different AWS Services
+
+Identity Access Management- IAM
+•       Overview of Identity and Access Management (IAM)
+•       IAM Features
+•       Elements of IAM: Identities, Polices and Resources
+•       Identify key IAM terms and Policy Document
+•       Analyze a Sample JSON Script
+•       List of  IAM Best Practices and Important Facts
+•       List of  IAM access keys and temporary security credentials
+•       AWS  Policy Evaluation Process
+•       Identity federation using three use cases-  SAML based federation
+•       IAM as single sign on (SSO)
+•       IAM Key Takeaways
