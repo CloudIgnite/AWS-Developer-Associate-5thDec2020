@@ -1,0 +1,19 @@
+###########
+  Ssh
+###########
+
+SSH ec2 windows using putty : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
+SSH pre-req : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html
+
+
+###########
+  Ec2
+###########
+
+
+
+
+Root User/ Super User / 1st User ===> very powerful
+
+
+Policy --> custom polices, AWS managed , inline polices 

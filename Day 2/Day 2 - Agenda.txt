@@ -1,0 +1,18 @@
+Ec2 : 
+ Overview of  Elastic Cloud Computing
+•       Identify EC2 benefits and related terminology
+•       EC2 Instance Types and resource Usage
+•       EC3 Instance types, families and purchasing options
+•       Difference between Root Volume in Instance Store and EBS
+•       Quiz: test your knowledge of EC2 and EBS
+•      Overview  of  Amazon Machine Images
+•       Identify the flow of an Instance Lifecycle
+•       Instance Store/EBS  as Root Volume Types
+•       Definition of  Amazon EFS
+•       Quiz: test your knowledge of EBS and AMI
+•       Create IAM Roles with ECS
+•       Various  Security groups
+•      Meta Data and User Data in EC2
+•      Overview of  Placement groups
+•      Elastic Load Balancer and Auto Scaling in EC2
+•       Quiz: test your knowledge of ELB, Meta data

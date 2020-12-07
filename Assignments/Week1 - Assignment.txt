@@ -1,0 +1,36 @@
+Task 1 :
+       - Create IAM User Alice , Bob, Ash
+       - Create IAM Group : Ec2-Admin, Ec2-Support, S3-Support
+       - Permissions for Ec2-Admin : For this we will 1st make a custom policy which will only allow VIEW, START and STOP for Ec2 instance
+       - Permissions for Ec2-Support : AmazonEC2ReadOnlyAccess Policy
+       - Permissions for S3-Support : AmazonS3ReadOnlyAccess Policy
+
+       - Alice will be a part of Ec2-Admin group
+       - Bob will be a part of Ec2-Support group
+       - Ash will be a part of  S3-Support  group
+
+       - Now sign-out and sign in again with each IAM user to test the policies
+
+
+
+Task 2 :
+      - Switch roles between 2 accounts and access the resources
+
+
+
+
+
+Task 3 :
+      - Create a key pair that will be used for ssh into the webserver
+      - Create an Ec2 Instance ( AMI : amazon linux 2 , instance type : t3.micro ) with termination protection enabled. Make sure to select the above key pair during creation.
+      - Put the following userdata while creating the instance :
+           #!/bin/bash
+           yum -y install httpd
+           systemctl enable httpd
+           systemctl start httpd
+           echo '<html><h1>Hello From Your First Lab Web Server!</h1></html>' > /var/www/html/index.html
+      - Modify the security group such that the web server allows HTTP access
+      - Try to access the web page
+      - Change the instance type to t2.micro
+      - Test termination protection by trying to delete the instance
+      
