@@ -1,6 +1,15 @@
+#####################
+AWS Consle and Docs
+#####################
+
 https://aws.amazon.com/console/
 
 https://docs.aws.amazon.com/
+
+
+#####################
+   Certification
+#####################
 
 https://aws.amazon.com/certification/
 
@@ -10,24 +19,50 @@ https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS-Certi
 
 https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Sample-Questions.pdf
 
+
+
+
+
+#####################
+  History and CC
+#####################
+
+AWS History : https://techcrunch.com/2016/07/02/andy-jassys-brief-history-of-the-genesis-of-aws/?guccounter=1&guce_referrer=aHR0cHM6Ly9qaWdzYXcuZ2lsbW9yZWdsb2JhbC5jb20v&guce_referrer_sig=AQAAAHp7JNp5pTQNemnNuRik45azpsVpt-OhdkCn4EWOIxL_vjSC0RqD0U6K81UnLZL5CGKMYA2KrJzK0cbw1cp0HGy2q8GU_LzzZwteptNdiwQVb1as-Bq5WTT3Jsn3jPOMBqrZGcpGjMIDamHamE7sjffOSel-qaIWkQ_dxdDY8bBR
+
+What is Cloud Computing : https://aws.amazon.com/what-is-cloud-computing/
+                          https://youtu.be/dH0yz-Osy54
+
+Benefits of CC : https://www.youtube.com/watch?v=yMJ75k9X5_8
+
 Infra :
 
 https://aws.amazon.com/about-aws/global-infrastructure/#:~:text=The%20AWS%20Global%20Cloud%20Infrastructure,services%20from%20data%20centers%20globally.&text=With%20millions%20of%20active%20customers,largest%20and%20most%20dynamic%20ecosystem.
 
 https://www.infrastructure.aws/
 
-AWS History : https://techcrunch.com/2016/07/02/andy-jassys-brief-history-of-the-genesis-of-aws/?guccounter=1&guce_referrer=aHR0cHM6Ly9qaWdzYXcuZ2lsbW9yZWdsb2JhbC5jb20v&guce_referrer_sig=AQAAAHp7JNp5pTQNemnNuRik45azpsVpt-OhdkCn4EWOIxL_vjSC0RqD0U6K81UnLZL5CGKMYA2KrJzK0cbw1cp0HGy2q8GU_LzzZwteptNdiwQVb1as-Bq5WTT3Jsn3jPOMBqrZGcpGjMIDamHamE7sjffOSel-qaIWkQ_dxdDY8bBR
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html
 
-What is Cloud Computing : https://aws.amazon.com/what-is-cloud-computing/
 
-Benefits of CC : https://www.youtube.com/watch?v=yMJ75k9X5_8
 
-FeedBack : https://www.surveymonkey.com/r/YKY5HMX?session_id=1703744097&type=GLVC&trainer=ayush&course=aws%20developer%20associate&mega_category=technology&id=688&mega_id=4
+
+###########
+    IAM
+###########
+
+IAM : https://aws.amazon.com/iam/
+      https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html
+
+FAQ : https://aws.amazon.com/iam/faqs/?nc=sn&loc=5
+
+Security best practices : https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html
+
+IAM root user : https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html
+
 
 IAM LAB : https://aws.amazon.com/premiumsupport/knowledge-center/cross-account-access-iam/
           https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html
 
+Task 1 : Create Ec2 and fetch data from S3
+         https://aws.amazon.com/premiumsupport/knowledge-center/ec2-instance-access-s3-bucket/
 
-SSH ec2 windows using putty : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html
-
-SSH pre-req : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html
+                  
