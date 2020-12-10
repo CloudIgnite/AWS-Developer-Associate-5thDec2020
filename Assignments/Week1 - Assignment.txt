@@ -1,7 +1,7 @@
 Task 1 :
        - Create IAM User Alice , Bob, Ash
        - Create IAM Group : Ec2-Admin, Ec2-Support, S3-Support
-       - Permissions for Ec2-Admin : For this we will 1st make a custom policy which will only allow VIEW, START and STOP for Ec2 instance
+       - Permissions for Ec2-Admin : For this, we will first create a custom policy which will only allow VIEW, START and STOP for Ec2 instance
        - Permissions for Ec2-Support : AmazonEC2ReadOnlyAccess Policy
        - Permissions for S3-Support : AmazonS3ReadOnlyAccess Policy
 
