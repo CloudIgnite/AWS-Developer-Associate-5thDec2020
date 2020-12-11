@@ -1,0 +1,52 @@
+Amazon Simple Storage Service (S3)
+
+  Create a bucket in Amazon S3
+  Add an object to a bucket
+  Manage access permissions on an object and a bucket
+  Create a bucket policy
+
+LAB SCENARIO :
+
+You work for a company using Amazon S3 for data storage. An application residing on an EC2 instance needs to push reporting data to an S3 bucket daily. You are tasked with creating an S3 bucket for your company to use for storing this report data. For a successful deployment, you need to ensure the EC2 instance has enough privileges to be able to upload and retrieve data from the S3 bucket. For security reasons, only the EC2 instance can write data to the S3 bucket. The files in the S3 bucket also require protection against accidental deletion.
+
+Task 1:
+        Create a bucket and give the bucket name as reportbucket(RandomNumber) [Replace NUMBER in the bucket name with a random number. This ensures that you have a unique name]. Example Bucket Name - reportbucket987987
+
+Task 2:
+        Upload an object to the bucket
+        Now that you have a bucket created for your report data, you are ready to work with objects. An object can be any kind of file: a text file, a photo, a video, a zip file, and so on. When you add an object to Amazon S3, you have the option of including metadata with the object and setting permissions to control access to the object.
+
+        In this task you test uploading objects to your reportbucket. Use the "new-report.png" file kept under the Assignment folder.
+
+
+Task 3:
+        Make an object ("new-report.png") public
+        Security is a priority in Amazon S3. Before you configure your EC2 instance to connect to the reportbucket, you want to test the bucket and object settings for security.
+
+        In this task, you configure permissions on your bucket and your object to test accessibility.
+
+        First, you attempt to access the object to confirm that it is private by default.
+
+
+Task 4:
+        Test connectivity from the EC2 instance.
+        In this task, you connect to your Amazon Elastic Compute Cloud (Amazon EC2) instance to test connectivity and security to the S3 reportbucket.
+
+        Hint: Create an Ec2 instance and provide the required IAM instance profile to complete this task. Also try to copy some new files to S3 bucket.
+
+
+
+Task 5:
+        Create a bucket policy
+        A bucket policy is a set of permissions associated with an S3 bucket. It is used to control access to an entire bucket or to specific directories within a bucket.
+        In this task, you use the AWS Policy Generator to create a bucket policy to enable read and write access from the EC2 instance to the bucket to ensure your reporting application can successfully write to S3.
+
+Bonus:
+        Explore versioning
+        Versioning is a means of keeping multiple variants of an object in the same bucket. You can use versioning to preserve, retrieve, and restore every version of every object stored in your Amazon S3 bucket. With versioning, you can easily recover from both unintended user actions and application failures.
+
+        For auditing and compliance reasons you need to enable versionsing on your reportbucket. Versioning should protect the reports in the reportbucket against accidental deletion. You are curious to see if this works as advertised. In this task, you enable versioning and test the feature by uploading a modified version of the sample-file.txt file from the previous task.
+
+
+Summary:
+You have successfully created an S3 bucket for your company to use to store report data from your EC2 Instance. You created a bucket policy to allow for the EC2 Instance to PutObjects and GetObject from the reportbuckt and you successfully tested uploading and downloading files from the EC2 instance to test the bucket policy. You have enabled versioning on the S3 bucket to protect against accidental object deletion. You have successfully completed the configuration for your EC2 reportbucket. Congratulations!

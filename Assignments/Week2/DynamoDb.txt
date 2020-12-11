@@ -1,0 +1,88 @@
+Introduction to Amazon DynamoDB
+
+Lab Overview
+Amazon DynamoDB is a fast and flexible NoSQL database service for all applications that need consistent, single-digit millisecond latency at any scale. It is a fully managed database and supports both document and key-value data models. Its flexible data model and reliable performance make it a great fit for mobile, web, gaming, ad-tech, IoT, and many other applications.
+
+In this lab, you will create a table in Amazon DynamoDB to store information about a music library. You will then query the music library and, finally, delete the DynamoDB table.
+
+In this lab, you will:
+  Create an Amazon DynamoDB table
+  Enter data into an Amazon DynamoDB table
+  Query an Amazon DynamoDB table
+  Delete an Amazon DynamoDB table
+
+
+
+Task 1:
+        Create a New Table
+        In this task, you will create a new table in DynamoDB named "Music".
+        Primary key : Artist
+        Sort key : Song
+        Your table will use default settings for indexes and provisioned capacity.
+
+Task 2:
+        Add Data
+        Data 1:
+        For Artist (String) : Pink Floyd
+        For Song (String) : Money
+        Also create an additional attributes like :
+          Album (String) :  The Dark Side of the Moon
+          Year (Number): 1973
+
+        Data 2:
+        Artist	(String)	John Lennon
+        Song	(String)	Imagine
+        Album	(String)	Imagine
+        Year	(Number)	1971
+        Genre	(String)	Soft rock
+        Note that this item has an additional attribute called genre. This is an example of each item being capable of having different attributes without having to pre-define a table schema.
+
+        Data 3:
+        Attribute Name	Attribute Type	Attribute Value
+        Artist	String	Psy
+        Song	String	Gangnam Style
+        Album	String	Psy 6 (Six Rules), Part 1
+        Year	Number	2011
+        LengthSeconds	Number	219
+        Once again, this item has a new LengthSeconds attribute identifying the length of the song. This demonstrates the flexibility of a NoSQL database.
+
+
+Task 3:
+        Modify an Existing Item :
+
+        Click Psy.
+        Change the Year from 2011 to 2012.
+
+Task 4:
+        Query the Table
+        There are two ways to query a DynamoDB table: Query and Scan.
+
+        A query operation finds items based on Primary Key and optionally Sort Key. It is fully indexed, so it runs very fast.
+
+        Click the drop-down list showing Scan and change it to Query.
+        Fields for the Partition Key and Sort Key are now displayed.
+
+Enter these details:
+Partition key:
+Psy
+Sort key:
+Gangnam Style
+Click Start search.
+
+        The song quickly appears in the list. A query is the most efficient way to retrieve data from a DynamoDB table.
+        Alternatively, you can scan for an item. This involves looking through every item in a table, so it is less efficient and can take significant time for larger tables.
+
+        Click the drop-down list showing Query and change it back to Scan.
+
+Click  Add filter, then: Scan
+For Enter attribute, type:
+Year
+Change String to Number
+For Enter value, type:
+1971
+Click Start search
+Only the song released in 1971 is displayed.
+
+Task 5:
+        Delete the Table
+        In this task, you will delete the Music table, which will also delete all the data in the table.

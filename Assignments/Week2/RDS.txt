@@ -1,0 +1,77 @@
+Introduction to Amazon RDS
+
+Introduction
+In this lab, we'll take an introductory look at Amazon RDS and see how to launch a private RDS instance with Multi-AZ deployment. We will first create a subnet group that contains two private subnets from different availability zones, then launch the RDS instance on the group with multi-AZ deployment. Going a little further, we will see one way to cleanly allow access to the RDS Instance by utilizing security groups.
+
+
+Task 1 :
+      Creating the Subnet Group
+We will first create a subnet group that contains the two private subnets that are in different availability zones.
+
+Set the Name and Description to intro2rds
+For the VPC ID, select the one named default.
+
+
+Task 2 :
+      Launching the RDS Instance
+Now that we have created the appropriate subnet group, it's time to launch the RDS Instance.
+
+From the RDS Dashboard, navigate to the Instances section.
+Click the Launch DB Instance button.
+Select MySQL from the list of options.
+In the Production section, select MySQL and click Next Step.
+For the DB Instance Class, choose the smallest option available for demonstration purposes: db.t2.micro.
+Set the Multi-AZ Deployment to No.
+The Settings section isn't crucial in this example since we don't plan on actually using it, but you can set the DB Instance Identifier and Master Username to intro2rds, and your own password.
+Click the Next Step button.
+We will now configure advanced settings for the instance.
+
+Set the VPC to the default VPC that was created for us.
+Select the Subnet Group that we recently created that we called intro2rds
+Publicly Accessible should be set to yes. ( provided the subnets are public subnets )
+Take note that you could choose an existing Security Group to assign to this instance if you already had one. We will leave the default selection of Create new Security Group option selected for this lab and see how to change its settings later on.
+Set the Database Name to intro2rds_db
+Leave all other settings unchanged and use the button the Launch DB Instance.
+Allow some time for it to finish up.
+
+Task 3:
+      Working with Security Groups
+In the previous section, we chose to create a new security group for the instance. It was created with default settings that typically not suited to your application's needs. Let's change the settings of the new security group.
+
+View the details of the RDS Instance that is currently launching from the Instances section of the VPC Dashboard by right clicking and selecting View Details.
+Locate the Security Groups listing under Security and Network and click the security group name. You will be taken to view the SG's details.
+Click the Inbound tab of its details.
+Notice that the default settings for this SG allow connections from a Source that matches your computer's public IP address. This means that requests are allowed to hit the instance only if they are coming from an IP address that matches yours. You can imagine this would cause issues if your application needed to access the RDS Instance. In this type of situation, we set the source to another SG (instead of a range of IP addresses) and assign the allowed group to anything that needs to access the RDS Instance.
+
+Allowing Access with Security Groups
+Let's create a new security group named application and set it as the allowed source in the security group associated to the RDS Instance.
+
+Click the Create Security Group button on this page.
+Set the Security group name and Description to application.
+Choose default as the VPC.
+Click the Create button.
+(If you don't see the new SG listed, remove any filters that are being applied from the search bar above.)
+
+We will now change the Source in the previous rule to the application SG we just created.
+
+Select the rds-launch-wizard security group that is associated to the RDS Instance.
+In its properties below, select the Inbound tab.
+Use the Edit button and change the Source to the application security group.
+Click the Save button.
+Now, if we were to create more resources that needed access to the RDS Instance, we simply add the new application security group to them.
+
+Task 4:
+      Applying the application Security Group to an EC2 Instance
+Let's demonstrate how to apply the new application security group to a new EC2 instance to grant access to the RDS Instance.
+
+Navigate to the Instances section of the EC2 Management Console.
+Click the Launch New Instance button.
+Select the Amazon Linux AMI.
+Leave the default t2.micro option selected and click Configure Instance Details.
+Choose the default VPC for the Network setting.
+Select the public subnet for the Subnet setting.
+Continue through the next few steps until you arrive at the Configure Security Group page where we will choose the new application SG we just created.
+
+Select the application security group and click Review and Launch.
+Ignore the warnings and launch. You don't need any keypair.
+Once this instance launched, it would be able to access the RDS Instance.
