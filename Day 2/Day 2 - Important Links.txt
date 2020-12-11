@@ -10,10 +10,8 @@ SSH pre-req : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInsta
   Ec2
 ###########
 
+Public Doc : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
+             https://aws.amazon.com/ec2/ 
+FAQ : https://aws.amazon.com/ec2/faqs/
 
 
-
-Root User/ Super User / 1st User ===> very powerful
-
-
-Policy --> custom polices, AWS managed , inline polices 
