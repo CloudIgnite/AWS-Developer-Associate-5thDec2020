@@ -11,7 +11,16 @@ SSH pre-req : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInsta
 ###########
 
 Public Doc : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
-             https://aws.amazon.com/ec2/ 
+             https://aws.amazon.com/ec2/
 FAQ : https://aws.amazon.com/ec2/faqs/
 
 
+SSH windows commands :
+
+$path = ".\test.pem"
+# Reset to remove explicit permissions
+icacls.exe $path /reset
+# Give current user explicit read-permission
+icacls.exe $path /GRANT:R "$($env:USERNAME):(R)"
+# Disable inheritance and remove inherited permissions
+icacls.exe $path /inheritance:r
