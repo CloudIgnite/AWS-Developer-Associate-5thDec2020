@@ -27,22 +27,3 @@ icacls.exe $path /inheritance:r
 
 
 
-qs :
-
-In azure we have resource group to group the resources do we have anything similar to that in AWS
-
-
-
- 169.254.169.254 webserver ? by aws
- How many private IPv4 can be assigned?
-
- Any real usecase example for network laod balancer ?
-
-
-0lob4Gtd1iiikY1rmAPA
-
-
-admin
-
-
-database-1.cst2tfa4ldh9.us-east-1.rds.amazonaws.com
